@@ -21,7 +21,7 @@ class HelloController extends Controller
     public function list()
     {
         return view('hello.list', [
-            'records' => Book::all()
+            'records' => Book::orderBy('price', 'asc')->paginate(3)
         ]);
     }
 }

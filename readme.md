@@ -43,9 +43,9 @@ DROP TABLE books;
 php artisan migrate
 php artisan migrate:rollback
 
-migrate:reset： すべて の マイグレーション を ロール バック
-migrate:refresh： すべて の マイグレーション を ロール バック し た 上 で、 再度 マイグレーション を 実行
-migrate:refresh --seed： すべて の マイグレーション を ロール バック し た 上で、 再度 マイグレーション を 実行（ シード を 投入）
+php artisan migrate:reset： すべて の マイグレーション を ロール バック
+php artisan migrate:refresh： すべて の マイグレーション を ロール バック し た 上 で、 再度 マイグレーション を 実行
+php artisan migrate:refresh --seed： すべて の マイグレーション を ロール バック し た 上で、 再度 マイグレーション を 実行（ シード を 投入）
 
 php artisan make:seeder BooksTableSeeder
 php artisan db:seed --class=BooksTableSeeder
@@ -60,3 +60,15 @@ php artisan make:seeder ReviewsTableSeeder
 php artisan db:seed --class=ReviewsTableSeeder
 
 php artisan make:controller SaveController
+
+composer require Laravel/ui
+php artisan ui vue --auth
+npm install
+npm run dev
+
+php -r "copy('https://readouble.com/laravel/6.x/ja/install-ja-lang-files.php', 'install-ja-lang.php');"
+php -f install-ja-lang.php
+php -r "unlink('install-ja-lang.php');"
+
+
+php artisan vendor:publish --tag=laravel-notifications

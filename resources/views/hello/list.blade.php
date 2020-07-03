@@ -34,6 +34,7 @@
       </tr>
     @endforeach
   </table>
+  {{ $records->links() }}
   @isset($max)
   max: {{$max}}
   @endisset

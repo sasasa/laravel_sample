@@ -86,3 +86,5 @@ Route::get('record/hasmany', 'RecordController@hasmany');
 // Route::get('save/{id}', 'SaveController@show');
 // Route::delete('save/{id}', 'SaveController@destroy');
 Route::resource('save', 'SaveController');
+Auth::routes(['verify' => true]);
+Route::get('/home', 'HomeController@index')->name('home');
