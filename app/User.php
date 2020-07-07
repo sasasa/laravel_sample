@@ -37,4 +37,19 @@ class User extends Authenticatable implements MustVerifyEmailContract
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function skills()
+    {
+        return $this
+        ->belongsToMany('App\Skill', 'skill_user')
+        ->using(SkillUser::class)->withPivot(['proficiency']);
+    }
+    
+    public function skillIds()
+    {
+        // return $this->skills()->get()->map(function($skill){
+        //     return $skill->id;
+        // })->toArray();
+        return $this->skills()->get()->modelKeys();
+    }
 }

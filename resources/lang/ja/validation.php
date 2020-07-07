@@ -150,6 +150,14 @@ return [
         "password" => "パスワード",
         "password_confirmation" => "パスワード(確認用)",
         "email" => "メールアドレス",
-    ],
+        'type' => 'タイプ',
 
+
+        'skill' => [
+            'type' => 'タイプ',
+            'name' => 'スキル名',
+            'tags' => 'タグ',
+            'users' => 'ユーザ',
+        ]
+    ],
 ];

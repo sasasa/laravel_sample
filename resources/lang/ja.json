@@ -36,5 +36,8 @@
   "If you did not create an account, no further action is required.":"心当たりがない場合は、本メッセージは破棄してください。",
 
   "Click button below and reset password.":"下のボタンをクリックしてパスワードを再設定してください。",
-  "Reset password":"パスワードリセット"
+  "Reset password":"パスワードリセット",
+
+  "Dashboard": "ダッシュボード",
+  "You are logged in!": "現在：ログインしています。"
   }

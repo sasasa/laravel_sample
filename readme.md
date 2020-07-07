@@ -72,3 +72,13 @@ php -r "unlink('install-ja-lang.php');"
 
 
 php artisan vendor:publish --tag=laravel-notifications
+
+
+php artisan make:model Skill -a
+php artisan migrate
+php artisan db:seed --class=SkillSeeder
+
+php artisan make:migration create_skill_user_table
+
+php artisan make:controller SkillUserController
+

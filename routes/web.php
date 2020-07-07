@@ -88,3 +88,14 @@ Route::get('record/hasmany', 'RecordController@hasmany');
 Route::resource('save', 'SaveController');
 Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
+Route::redirect('/', '/home', 301);
+
+Route::middleware(['verified'])->group(function() {
+
+    Route::resource('skills', 'SkillController');
+    Route::get('skilluser', 'SkillUserController@create');
+    Route::post('skilluser', 'SkillUserController@store');
+    Route::get('proficiency', 'SkillUserController@proficiency');
+    Route::post('proficiency', 'SkillUserController@storeProficiency');
+
+});
