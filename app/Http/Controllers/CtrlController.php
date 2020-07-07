@@ -38,7 +38,7 @@ class CtrlController extends Controller
     public function outFile()
     {
         return response()
-            ->download('C:\xampp\htdocs\quick_laravel\data.csv', 'download.csv', [
+            ->download('C:\xampp\htdocs\laravel_sample\data.csv', 'download.csv', [
                 'content-type' => 'text/csv'
             ]);
     }
@@ -62,7 +62,7 @@ class CtrlController extends Controller
     public function outImage()
     {
         return response()
-            ->file('C:\xampp\htdocs\quick_laravel\cat.png', [
+            ->file('C:\xampp\htdocs\laravel_sample\cat.png', [
                 'content-type' => 'image/png'
             ]);
     }

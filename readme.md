@@ -9,8 +9,8 @@ laravel new .
 
 php artisan serve
 
-DocumentRoot "C:/xampp/htdocs/quick_laravel/public"
-<Directory "C:/xampp/htdocs/quick_laravel/public">
+DocumentRoot "C:/xampp/htdocs/laravel_sample/public"
+<Directory "C:/xampp/htdocs/laravel_sample/public">
 
 php artisan make:controller HelloController
 
@@ -18,7 +18,7 @@ php artisan make:controller HelloController
 CREATE DATABASE quick_laravel CHARACTER SET utf8;
 GRANT ALL PRIVILEGES ON quick_laravel.* TO quickusr@localhost IDENTIFIED BY 'quickpass';
 USE quick_laravel;
-source C:\xampp\htdocs\quick_laravel\quick.sql
+source C:\xampp\htdocs\laravel_sample\quick.sql
 
 
 php artisan make:model Book
